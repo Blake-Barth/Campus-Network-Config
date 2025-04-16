@@ -37,11 +37,6 @@ Welcome to my GitHub profile! I'm a **security-focused tech enthusiast** with a 
 
 ---
 
-> 🥷 “To know your enemy, you must become your enemy.” — *Sun Tzu*  
-> Essential wisdom — on and off the network.
-
----
-
 ## 🚀 Projects
 
 ### 🛡️ [Linux Hardening Suite](https://github.com/Blake-Barth/Linux-Hardening-Suite)
@@ -99,3 +94,8 @@ Cisco Packet Tracer–based simulations for configuring a small campus network.
 - Switch and router configurations  
 - VLAN setup and trunking  
 - Static and dynamic routing  
+
+---
+
+> 🥷 “To know your enemy, you must become your enemy.” — *Sun Tzu*  
+> Essential wisdom — on and off the network.
