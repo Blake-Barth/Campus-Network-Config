@@ -1,6 +1,6 @@
 # 👋 Hey there, I’m Blake Barth
 
-Welcome to my GitHub profile! I'm a **security-focused tech enthusiast** with a passion for automating the hard stuff and diving deep into **networking** and **Linux internals**.
+Welcome to my GitHub profile! I'm a **Networking and IT enthusiast** with a passion for automating the hard stuff and diving deep into **Linux internals** and **security**.
 
 ---
 
@@ -29,11 +29,11 @@ Welcome to my GitHub profile! I'm a **security-focused tech enthusiast** with a 
 
 ## 💬 Ask Me About
 
+- Networking protocols  
 - Linux administration and hardening  
 - Bash scripting and automation  
-- Cybersecurity fundamentals
-- Networking Protocols
-- Machine Learning
+- Cybersecurity fundamentals  
+- Machine learning  
 
 ---
 
@@ -87,9 +87,11 @@ Includes:
 
 ---
 
-### 🌐 [Campus Network Config](https://github.com/Blake-Barth/Campus-Network-Config)
+### 🌐 [Campus Network Config](https://github.com/Blake-Barth/Campus-Network-Config) *(In Progress)*
 
-Cisco Packet Tracer–based simulations for configuring a small campus network.
+**Work in progress**: Cisco Packet Tracer–based simulations for configuring a small campus network.
+
+Will include:
 
 - Switch and router configurations  
 - VLAN setup and trunking  
