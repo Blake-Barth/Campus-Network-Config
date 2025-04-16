@@ -39,17 +39,11 @@ Welcome to my GitHub profile! I'm a **security-focused tech enthusiast** with a 
 
 - Linux administration and hardening  
 - Bash scripting and automation  
-- Cybersecurity fundamentals  
+- Cybersecurity fundamentals
+- Networking Protocols
+- Machine Learning
 
 ---
-
-## 🤝 I’m Looking For Help With
-
-Open to collaborations on:
-
-- Security tools  
-- Infrastructure automation  
-- Projects that mix networking, Linux, and security  
 
 > 🥷 “To know your enemy, you must become your enemy.” — *Sun Tzu*  
 > Essential wisdom — on and off the network.
