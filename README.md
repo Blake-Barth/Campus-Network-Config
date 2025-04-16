@@ -21,14 +21,6 @@ Welcome to my GitHub profile! I'm a **security-focused tech enthusiast** with a 
 
 ---
 
-## 📚 Also Learning
-
-- Linux internals  
-- Real-world security automation tools  
-- How to break stuff... and then fix it 😄  
-
----
-
 ## 📜 Certifications
 
 - ✅ CompTIA Security+  
