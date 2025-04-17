@@ -1,4 +1,4 @@
-# 🏫 Campus Network Design – Packet Tracer Project
+# 🏫 Campus Network Config – Packet Tracer Project
 
 ## Overview
 
