@@ -1,103 +1,89 @@
-# 👋 Hey there, I’m Blake Barth
+# 🏫 Campus Network Design – Packet Tracer Project
 
-Welcome to my GitHub profile! I'm a **Networking and IT enthusiast** with a passion for automating the hard stuff and diving deep into **Linux internals** and **security**.
+## Overview
 
----
+This repository contains the early layout and planning files for a multi-site campus network simulation in Cisco Packet Tracer. The goal of this project is to build a realistic, modular, and redundant network topology that allows for hands-on practice with a wide range of networking technologies.
 
-## 📫 How to Reach Me
-
-- 📧 Email: [blakebarth@proton.me](mailto:blakebarth@proton.me)  
-- 💼 LinkedIn: [linkedin.com/in/Blake-Barth](https://linkedin.com/in/Blake-Barth)
+> **Status:** 🚧 *In early layout and planning phase*
 
 ---
 
-## 🔧 Currently Working On
+## 📐 Network Design Highlights
 
-### 📡 Pursuing the CCNA (Cisco Certified Network Associate)
+This design follows a **3-tier hierarchical model** deployed across **two campus locations**, each with redundant routing and switching:
 
-- Building a strong foundation in networking fundamentals and protocols  
-- Configuring simulated networks in Cisco Packet Tracer  
-- Documenting everything for reproducibility and better understanding  
-
----
-
-## 📜 Certifications
-
-- ✅ CompTIA Security+  
-
----
-
-## 💬 Ask Me About
-
-- Networking protocols  
-- Linux administration and hardening  
-- Bash scripting and automation  
-- Cybersecurity fundamentals  
-- Machine learning  
+- **Core Layer:**
+  - 2 redundant Cisco 4331 routers
+  - 2 Layer 3 switches (Cisco 3560) per site
+- **Distribution Layer:**
+  - 4 Layer 2 switches (per site)
+- **Access Layer:**
+  - 4 Layer 2 switches (per site)
+- **Inter-site connection:** Planned via WAN link (e.g. simulated serial, fiber, or VPN)
 
 ---
 
-## 🚀 Projects
+## 🛠️ Configuration Goals
 
-### 🛡️ [Linux Hardening Suite](https://github.com/Blake-Barth/Linux-Hardening-Suite)
+This network will be used to practice the configuration and integration of:
 
-A collection of Python scripts designed to improve Lynis audit scores and lock down Linux servers (tested on Linode).
-
-Includes:
-
-- Antivirus setup  
-- SSH and sysctl hardening  
-- GRUB protection  
-- Kernel module restrictions  
-- Firewall configuration (UFW)  
-- File permission lockdown  
-
----
-
-### 🕹️ [NEAT AI Agent for Swing Copters](https://github.com/Blake-Barth/NEAT-SwingCopters-AI)
-
-An AI agent built with NEAT (NeuroEvolution of Augmenting Topologies) in Python.
-
-- Learns to play Swing Copters on its own  
-- A fun dive into machine learning through games  
+- ✅ **VLANs** (segmentation by department, building, etc.)
+- ✅ **Inter-VLAN routing** (via Layer 3 switches or routers)
+- ✅ **DHCP** (central or distributed address assignment)
+- ✅ **DNS** (internal name resolution)
+- ✅ **LAN/WAN topologies** (multi-site communication and routing)
+- ✅ **IP Phones and Voice VLANs** (VoIP network simulation)
+- ✅ **Redundant links** (STP, EtherChannel)
+- ✅ **Dynamic Routing Protocols** (OSPF, EIGRP)
+- ✅ **Security policies** (basic ACLs and port security)
+- ✅ **NTP, SNMP, and Syslog** (optional network services for monitoring)
 
 ---
 
-### 🎮 [G.A.M.E. (Capstone Project)](https://github.com/Blake-Barth/G.A.M.E)
+## 🔧 Tools Used
 
-A JavaScript-based game developed during a collaborative FSU capstone project.
-
-Focused on:
-
-- Game mechanics  
-- Team coordination  
-- Endurance under deadlines  
-
----
-
-### 🧰 [Unix Tools Scripts](https://github.com/Blake-Barth/Shell-Perl-Scripts)
-
-A set of Bash and Perl utilities created as part of a Unix Tools course.
-
-Includes:
-
-- File management scripts  
-- Text processing tools  
-- Custom calendar, phonebook, and plotting scripts  
+- **Cisco Packet Tracer 8.x**
+- Standard Cisco routers and switches:
+  - Cisco 4331 ISR (core routers)
+  - Cisco 3560 (Layer 3 switches)
+  - Cisco 2960 (Layer 2 switches)
+- Simulated end devices:
+  - PCs
+  - IP Phones
+  - Printers
+  - Servers (DHCP, DNS, etc.)
 
 ---
 
-### 🌐 [Campus Network Config](https://github.com/Blake-Barth/Campus-Network-Config) *(In Progress)*
+## 🧪 Planned Use Cases
 
-**Work in progress**: Cisco Packet Tracer–based simulations for configuring a small campus network.
-
-Will include:
-
-- Switch and router configurations  
-- VLAN setup and trunking  
-- Static and dynamic routing  
+- Hands-on practice for CCNA-level topics
+- Campus LAN and WAN simulation
+- VLAN and IP addressing schema design
+- High availability (redundant core/distribution layers)
+- Testing network scalability and service integration
 
 ---
 
-> 🥷 “To know your enemy, you must become your enemy.” — *Sun Tzu*  
-> Essential wisdom — on and off the network.
+## 🚀 Future Enhancements
+
+- Add server services: FTP, web, email
+- Configure failover gateway protocols (HSRP/VRRP)
+- Introduce network monitoring and logging tools
+- Simulate security policies (ACLs, DMZ, switchport security)
+
+---
+
+## 📁 Files
+
+- `campus_network_v0.pkt` – Initial topology layout (in progress)
+- `topology_diagram.png` – Visual map of the network (coming soon)
+- `config_snippets/` – Saved configuration templates and commands (coming soon)
+
+---
+
+## 👨‍💻 Author
+
+**Blake Barth**  
+Security-focused tech enthusiast | CompTIA Security+ | Studying for CCNA  
+Passionate about network automation, Linux internals, and practical lab simulations.
