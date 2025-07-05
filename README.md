@@ -1,89 +1,63 @@
-# 🏫 Campus Network Config – Packet Tracer Project
+# 🏢 Campus Area Network (CAN) - Packet Tracer Project
 
-## Overview
+This project simulates a **Campus Area Network (CAN)** using Cisco Packet Tracer. The network spans **three buildings**, each containing devices logically segmented into **four VLANs**:
 
-This repository contains the early layout and planning files for a multi-site campus network simulation in Cisco Packet Tracer. The goal of this project is to build a realistic, modular, and redundant network topology that allows for hands-on practice with a wide range of networking technologies.
+- `VLAN 10` - **ENG** (Engineering) — `10.0.0.0/24`
+- `VLAN 20` - **SALES** — `192.168.20.0/24`
+- `VLAN 30` - **HR** — `192.168.30.0/24`
+- `VLAN 99` - **SERVER** — `192.168.99.0/24`
 
-> **Status:** 🚧 *In early layout and planning phase*
+A **centralized DHCP server** in the SERVER VLAN (VLAN 99) handles IP address assignments for all VLANs across all three buildings.
 
----
-
-## 📐 Network Design Highlights
-
-This design follows a **3-tier hierarchical model** deployed across **two campus locations**, each with redundant routing and switching:
-
-- **Core Layer:**
-  - 2 redundant Cisco 4331 routers
-  - 2 Layer 3 switches (Cisco 3560) per site
-- **Distribution Layer:**
-  - 4 Layer 2 switches (per site)
-- **Access Layer:**
-  - 4 Layer 2 switches (per site)
-- **Inter-site connection:** Planned via WAN link (e.g. simulated serial, fiber, or VPN)
+Inter-VLAN routing is performed directly on a **Layer 3 switch** using SVIs (Switched Virtual Interfaces).
 
 ---
 
-## 🛠️ Configuration Goals
+## 📁 File
 
-This network will be used to practice the configuration and integration of:
-
-- ✅ **VLANs** (segmentation by department, building, etc.)
-- ✅ **Inter-VLAN routing** (via Layer 3 switches or routers)
-- ✅ **DHCP** (central or distributed address assignment)
-- ✅ **DNS** (internal name resolution)
-- ✅ **LAN/WAN topologies** (multi-site communication and routing)
-- ✅ **IP Phones and Voice VLANs** (VoIP network simulation)
-- ✅ **Redundant links** (STP, EtherChannel)
-- ✅ **Dynamic Routing Protocols** (OSPF, EIGRP)
-- ✅ **Security policies** (basic ACLs and port security)
-- ✅ **NTP, SNMP, and Syslog** (optional network services for monitoring)
+- `Network.pkt` — Cisco Packet Tracer project file with full configuration.
 
 ---
 
-## 🔧 Tools Used
+## 📌 Features
 
-- **Cisco Packet Tracer 8.x**
-- Standard Cisco routers and switches:
-  - Cisco 4331 ISR (core routers)
-  - Cisco 3560 (Layer 3 switches)
-  - Cisco 2960 (Layer 2 switches)
-- Simulated end devices:
-  - PCs
-  - IP Phones
-  - Printers
-  - Servers (DHCP, DNS, etc.)
+- ✅ 802.1Q VLAN Trunking
+- ✅ Layer 3 Switching for Inter-VLAN Routing (No Router-on-a-Stick)
+- ✅ Central DHCP Server with Relay via `ip helper-address`
+- ✅ Subnetting by Department
+- ✅ Multi-building design with VLAN propagation
 
 ---
 
-## 🧪 Planned Use Cases
+## ⚙️ Devices Used
 
-- Hands-on practice for CCNA-level topics
-- Campus LAN and WAN simulation
-- VLAN and IP addressing schema design
-- High availability (redundant core/distribution layers)
-- Testing network scalability and service integration
-
----
-
-## 🚀 Future Enhancements
-
-- Add server services: FTP, web, email
-- Configure failover gateway protocols (HSRP/VRRP)
-- Introduce network monitoring and logging tools
-- Simulate security policies (ACLs, DMZ, switchport security)
+- 1x **Layer 3 Switch** (for VLAN interfaces and routing)
+- 3x **Access Switches** (1 per building)
+- 1x **DHCP Server** (in VLAN 99)
+- Multiple **end devices** in ENG, SALES, HR VLANs
 
 ---
 
-## 📁 Files
+## 📡 DHCP Configuration
 
-- `campus_network_v0.pkt` – Initial topology layout (in progress)
-- `topology_diagram.png` – Visual map of the network (coming soon)
-- `config_snippets/` – Saved configuration templates and commands (coming soon)
+- The DHCP server resides in **VLAN 99** (`192.168.99.0/24`)
+- VLANs 10, 20, and 30 are configured with `ip helper-address` on the Layer 3 switch
+- Each VLAN has its own DHCP pool configured on the server
+
+---
+
+## 🧪 Testing Instructions
+
+1. Open `CAN_Network.pkt` in Cisco Packet Tracer.
+2. Power on all devices.
+3. Confirm that end devices in VLANs 10, 20, and 30 receive IP addresses from the DHCP server.
+4. Ping across VLANs to confirm inter-VLAN routing.
+5. Optionally test DNS or HTTP services if configured on the server.
 
 ---
 
 ## 👨‍💻 Author
 
 **Blake Barth**  
-Security-focused tech enthusiast | CompTIA Security+ | Studying for CCNA  
-Passionate about network automation, Linux internals, and practical lab simulations.
+📧 [blakebarth@proton.me](mailto:blakebarth@proton.me)  
+🌐 [GitHub](https://github.com/Blake-Barth) | [LinkedIn](https://linkedin.com/in/Blake-Barth)
